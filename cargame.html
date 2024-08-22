@@ -17,7 +17,7 @@ function setup(){
 }
 
 function drawCar(x, y){
-  strokeWidth(0);
+  strokeWeight(0);
   fill(255, 0, 0);
   rect(x, y + 10, 80, 40);
   fill(0);
@@ -28,7 +28,7 @@ function drawCar(x, y){
 }
 
 function drawRoad(){
-  strokeWidth(0);
+  strokeWeight(0);
   fill(255);
   for (let x = -carX; x < width; x += 60){
     rect(x, width/2 - 5, 30, 10);
