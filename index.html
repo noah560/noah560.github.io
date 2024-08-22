@@ -8,6 +8,17 @@
     <main>
       <h1>Noah's Website</h1>
     </main>
-    <script src="/home.js"></script>
+    <script>
+let frame = 0;
+
+function setup(){
+  createCanvas(400, 80);
+}
+
+function draw(){
+  text("Noah's Projects", 0, sin(frame/10));
+  frame++;
+}
+    </script>
   </body>
 </html>
