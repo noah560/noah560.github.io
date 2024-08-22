@@ -12,12 +12,26 @@ let carX = 0;
 let lane = 0;
 const laneSize = 100;
 
+class Wall {
+  constructor(lane, x){
+    this.lane = lane;
+    this.x = x;
+  }
+  draw(){
+    strokeWeight(0);
+    fill(0, 0, 255);
+    rect(this.x-carX, this.lane * (height/2));
+  }
+}
+
+let walls = [];
+
 function setup(){
   createCanvas(400, 200);
 }
 
 function drawCar(x, y){
-  let carHeight = 80;
+  let carHeight = 60;
   strokeWeight(0);
   fill(255, 0, 0);
   rect(x, y + 10, 80, carHeight);
@@ -36,10 +50,21 @@ function drawRoad(){
   }
 }
 
+function newWall(){
+  let lane = 0;
+  if (Math.random() < 0.5){
+    lane = 1;
+  }
+  walls.push(new Wall(carX + width), lane);
+}
+
 function draw(){
   background(128);
   drawRoad();
   drawCar(0, lane * (height/2));
+  for (int i = 0; i < walls.length; i++){
+    walls[i].draw();
+  }
   carX += 2;
 }
     </script>
