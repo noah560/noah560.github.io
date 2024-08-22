@@ -7,12 +7,14 @@
   <body>
     <main>
       <h1>Noah's Website</h1>
+      <canvas id="canvas" width="400" height="70"></canvas>
     </main>
     <script>
 let frame = 0;
 
 function setup(){
-  createCanvas(400, 400);
+  let c = document.getElementById("canvas");
+  createCanvas(c.width, c.height, c);
 }
 
 function drawN(x, y){
