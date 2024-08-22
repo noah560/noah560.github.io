@@ -17,14 +17,15 @@ function setup(){
 }
 
 function drawCar(x, y){
+  let carHeight = 40;
   strokeWeight(0);
   fill(255, 0, 0);
-  rect(x, y + 10, 80, 40);
+  rect(x, y + 10, 80, carHeight);
   fill(0);
   rect(x, y, 30, 10);
   rect(x + 50, y, 30, 10);
-  rect(x, y + 50, 30, 10);
-  rect(x + 50, y + 50, 30, 10);
+  rect(x, y + carHeight + 10, 30, 10);
+  rect(x + 50, y + carHeight + 10, 30, 10);
 }
 
 function drawRoad(){
