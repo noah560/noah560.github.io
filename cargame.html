@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/p5.js"></script>
+  </head>
+  <body>
+    <main>
+      <h1>Car Game</h1>
+    </main>
+    <script>
+let carX = 0;
+let lane = 0;
+const laneSize = 100;
+
+function setup(){
+  createCanvas(400, 200);
+}
+
+function drawCar(x, y){
+  strokeWidth(0);
+  fill(255, 0, 0);
+  rect(x, y + 10, 80, 40);
+  fill(0);
+  rect(x, y, 30, 10);
+  rect(x + 50, y, 30, 10);
+  rect(x, y + 40, 30, 10);
+  rect(x + 50, y + 40, 30, 10);
+}
+
+function draw(){
+  background(128);
+}
+    </script>
+  </body>
+</html>
