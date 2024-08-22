@@ -27,8 +27,18 @@ function drawCar(x, y){
   rect(x + 50, y + 40, 30, 10);
 }
 
+function drawRoad(){
+  strokeWidth(0);
+  fill(255);
+  for (let x = -carX; x < width; x += 60){
+    rect(x, width/2 - 5, 30, 10);
+  }
+}
+
 function draw(){
   background(128);
+  drawRoad();
+  carX++;
 }
     </script>
   </body>
