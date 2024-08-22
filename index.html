@@ -15,12 +15,16 @@ function setup(){
   createCanvas(400, 400);
 }
 
-function draw(){
+function drawN(x, y){
   stroke(0, 0, 0);
-  strokeWeight(10);
-  line(10, 10, 10, 50);
-  line(10, 10, 50, 50);
-  line(50, 10, 50, 50);
+  strokeWeight(15);
+  line(x, y, x, y + 40);
+  line(x, y, x + 40, y + 40);
+  line(x + 40, y, x + 40, y + 40);
+}
+
+function draw(){
+  drawN(((frame/10) % 440) - 40, 10);
   frame++;
 }
     </script>
