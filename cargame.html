@@ -56,7 +56,10 @@ function newWall(){
   if (Math.random() < 0.5){
     Wlane = 1;
   }
-  walls.push(new Wall(carX + width, lane));
+  walls.push(new Wall(carX + width, Wlane));
+  console.log("New wall:");
+  console.log("  x: " + carX + width);
+  console.log("  lane: " + Wlane)
 }
 
 function draw(){
