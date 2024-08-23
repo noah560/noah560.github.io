@@ -11,6 +11,7 @@
 let carX = 0;
 let lane = 0;
 const laneSize = 100;
+let wallTimer = 100;
 
 class Wall {
   constructor(lane, x){
@@ -66,6 +67,11 @@ function draw(){
     walls[i].draw();
   }
   carX += 2;
+  wallTimer--;
+  if (wallTimer < 1){
+    newWall();
+    wallTimer = 40 + (Math.random() * 40);
+  }
 }
     </script>
   </body>
