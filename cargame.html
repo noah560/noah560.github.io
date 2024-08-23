@@ -62,12 +62,27 @@ function newWall(){
   console.log("  lane: " + Wlane)
 }
 
+function keyPressed(){
+  lane = 1;
+}
+
+function keyReleased(){
+  lane = 0;
+}
+
 function draw(){
   background(128);
   drawRoad();
   drawCar(0, lane * (height/2));
   for (let i = 0; i < walls.length; i++){
     walls[i].draw();
+    if (walls[i].x < carX+80){
+      if (walls[i].lane == lane){
+        walls = [];
+        carX = 0;
+        wallTimer = 100;
+      }
+    }
   }
   carX += 2;
   wallTimer--;
