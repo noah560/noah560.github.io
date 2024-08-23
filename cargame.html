@@ -63,11 +63,7 @@ function newWall(){
 }
 
 function keyPressed(){
-  lane = 1;
-}
-
-function keyReleased(){
-  lane = 0;
+  lane = 1 - lane;
 }
 
 function draw(){
