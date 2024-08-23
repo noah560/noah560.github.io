@@ -13,6 +13,7 @@ let carX = 0;
 let lane = 0;
 const laneSize = 100;
 let wallTimer = 100;
+let dieSound;
 
 class Wall {
   constructor(x, Wlane){
@@ -30,6 +31,7 @@ let walls = [];
 
 function setup(){
   createCanvas(400, 200);
+  dieSound = new Audio("explode.wav");
 }
 
 function drawCar(x, y){
@@ -80,6 +82,7 @@ function draw(){
           carX = 0;
           wallTimer = 100;
           score = 0;
+          dieSound.play();
         }
       }
     }
