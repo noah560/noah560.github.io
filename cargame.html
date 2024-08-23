@@ -52,11 +52,11 @@ function drawRoad(){
 }
 
 function newWall(){
-  let lane = 0;
+  let Wlane = 0;
   if (Math.random() < 0.5){
-    lane = 1;
+    Wlane = 1;
   }
-  walls.push(new Wall(carX + width), lane);
+  walls.push(new Wall(carX + width, lane));
 }
 
 function draw(){
