@@ -62,7 +62,7 @@ function draw(){
   background(128);
   drawRoad();
   drawCar(0, lane * (height/2));
-  for (int i = 0; i < walls.length; i++){
+  for (let i = 0; i < walls.length; i++){
     walls[i].draw();
   }
   carX += 2;
