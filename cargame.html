@@ -78,9 +78,11 @@ function draw(){
     walls[i].draw();
     if (walls[i].x < carX+80){
       if (walls[i].lane == lane){
-        walls = [];
-        carX = 0;
-        wallTimer = 100;
+        if (walls[i].x > carX){
+          walls = [];
+          carX = 0;
+          wallTimer = 100;
+        }
       }
     }
   }
